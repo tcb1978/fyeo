@@ -26,8 +26,8 @@ export default class ToDoList extends Component {
     }
     
     render() {
-        // const List = [...this.state.list];
-        // List.map((value, index) => <li key={`uniquieKey_${index}`}>{value}</li>)
+        const List = [...this.state.list];
+        List.map((value, index) => <li key={`uniquieKey_${index}`}>{value}</li>)
         return (
             <Aux>
                 <div className="to-do-wrapper">
@@ -42,7 +42,7 @@ export default class ToDoList extends Component {
                     >X</button></div>
                 </div>
                 <ul>
-                    <li></li>
+                    {List}
                 </ul>
             </Aux>
         );
